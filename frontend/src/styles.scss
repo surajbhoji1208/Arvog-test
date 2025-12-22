@@ -1,0 +1,105 @@
+/* Global Styles */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Toolbar */
+.main-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.active-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  padding-top: 20px;
+}
+
+/* Premium Layout */
+.product-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ... existing styles ... */
+/* Retain previous styles but integrate with new top-level structure */
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.table-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.upload-card {
+  width: 500px;
+  padding: 20px;
+}
+
+.file-area {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-name {
+  font-style: italic;
+  color: #666;
+}
+
+.mat-mdc-raised-button {
+  border-radius: 8px !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

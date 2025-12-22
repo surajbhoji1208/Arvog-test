@@ -1,0 +1,24 @@
+<div class="upload-container">
+    <mat-card class="upload-card">
+        <mat-card-header>
+            <mat-card-title>Bulk Upload Products</mat-card-title>
+            <mat-card-subtitle>Select a CSV file to import products</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="file-area">
+                <button mat-raised-button (click)="fileInput.click()">Choose File</button>
+                <input hidden (change)="onFileSelected($event)" #fileInput type="file" accept=".csv">
+                <span class="file-name" *ngIf="file">{{file.name}}</span>
+            </div>
+
+            <div class="progress-bar" *ngIf="isUploading">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button routerLink="/products">Cancel</button>
+            <button mat-raised-button color="primary" [disabled]="!file || isUploading"
+                (click)="upload()">Upload</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
